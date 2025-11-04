@@ -28,8 +28,9 @@ print("-------------------------------------------\n"
 # Output: Hello, Jordan! You enjoy painting.
 
 # Write your code below:
-
-
+name = input("What is your name?: ")
+hobby = input("What is your favourite hobby?: ")
+print(f"Welcome {name}! You enjoy {hobby}.")
 
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 2:
@@ -38,8 +39,8 @@ print("-------------------------------------------\n"
 # “Jordan is 25 years old and enjoys painting.”
 #
 # Write your code below:
-
-
+age = int(input("What is your age?: "))
+print(f"{name} is {age} years old and enjoys {hobby}.")
 
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 3:
@@ -48,8 +49,10 @@ print("-------------------------------------------\n"
 # - Otherwise, print “That’s a great hobby for oldies too!”
 #
 # Write your code below:
-
-
+if age < 40:
+    print(f"You're quite young to be into {hobby}!")
+else:
+    print(f"That's a great hobby for oldies too!")
 
 
 # Task 2: Counting
@@ -72,8 +75,9 @@ print("-------------------------------------------\n"
 # Counting: 5
 
 # Write your code below:
-
-
+limit = int(input("Please enter a number between 1 and 10\n "))
+for i in range (1, limit + 1):
+    print(f"counting: {i}")
 
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 2:
@@ -81,9 +85,13 @@ print("-------------------------------------------\n"
 # Print "x is even" or "x is odd" for each number.
 #
 # Write your code below:
-
-
-
+limit = int(input("Please enter a number between 1 and 10\n "))
+for i in range (1 , i + 1):
+    print(f"counting: {i}")
+    if i % 2 == 0:
+        print(f"i is even")
+    else:
+        print(f"i is odd") 
 
 # Task 3: Shopping List Builder
 # -------------------------------------------
@@ -102,9 +110,15 @@ print("-------------------------------------------\n"
 # Output list should be ['milk', 'eggs', 'bread']
 
 # Write your code below:
-
-
-
+# WORKING ON THIS ONE:
+shopping_list = []
+item1 = input("enter your item 1: ")
+item2 = input("enter your item 2: ")
+item3 = input("enter your item 3: ")
+shopping_list.append(item1)
+shopping_list.append(item2)
+shopping_list.append(item3)
+print("Your current shopping list includes:", shopping_list)
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 2:
 # Use a for loop to print each item in the list neatly, one per line.
@@ -115,16 +129,16 @@ print("-------------------------------------------\n"
 # bread
 #
 # Write your code below:
-
-
-
+for item in shopping_list:
+    print(item)
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 3:
 # Ask the user for one more item to add.
 # Append it to the list and print the updated list again.
 #
 # Write your code below:
-
+extra_item = ("\n Enter one more item to add: ")
+shopping_list.append(extra_item)
 
 
 
@@ -138,7 +152,12 @@ print("-------------------------------------------\n"
 # Ask the user to guess the number.
 #
 # Write your code below:
-
+secret_number = 4
+guess = int(input("Guess the number: "))
+if (secret_number != guess):
+    print("Wrong, try again!")
+else:
+    print("Correct!")
 
 
 # SWAP LEARNERS BEFORE THIS STEP
@@ -148,6 +167,10 @@ print("-------------------------------------------\n"
 # - Otherwise, print “Wrong, try again!”
 #
 # Write your code below:
+if (secret_number != guess):
+    print("Wrong, try again!")
+else:
+    print("Correct!")
 
 
 
@@ -157,6 +180,9 @@ print("-------------------------------------------\n"
 # Print “Well done!” when they finally get it right.
 #
 # Write your code below:
+while (secret_number != guess):
+    guess = int(input("Wrong, try again! "))
+print("Well done!")
 
 
 
@@ -171,7 +197,7 @@ print("-------------------------------------------\n"
 # Store this number in a variable and convert it to an integer.
 
 # Write your code below:
-
+amount_to_enter = int(input("How many numbers do you want to enter: "))
 
 
 # SWAP LEARNERS BEFORE THIS STEP
@@ -181,7 +207,9 @@ print("-------------------------------------------\n"
 # Convert each input to int() and append it to the list.
 #
 # Write your code below:
-
+numbers = []
+for i in range(0,amount_to_enter):
+    numbers.append(int(input(f"Enter number {i+1}: ")))
 
 
 # SWAP LEARNERS BEFORE THIS STEP
@@ -191,7 +219,7 @@ print("-------------------------------------------\n"
 # "The average of your numbers is X"
 #
 # Write your code below:
-
+print(f"The average of your numbers is {sum(numbers) / len(numbers)}")
 
 
 
@@ -204,6 +232,11 @@ print("-------------------------------------------\n"
 # Step 1:
 # Ask the user to enter three test scores (as integers).
 # Calculate the average score.
+numbers = []
+for i in range(0,3):
+    numbers.append(int(input(f"Enter number {i+1}: ")))
+average = sum(numbers) / len(numbers)
+print(f"Average is {average}")
 
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 2:
@@ -218,9 +251,12 @@ print("-------------------------------------------\n"
 # Enter scores: 70, 65, 80 → Output: Average = 71.6, Excellent!
 #
 # Write your code below:
-
-
-
+if (average >= 70):
+    print("Excellent!")
+elif (average >=50 or average < 70):
+    print("Good effort!")
+else:
+    print("Needs improvement.")
 
 # -------------------------------------------
 # Submitting Your Work
